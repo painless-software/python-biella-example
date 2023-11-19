@@ -1,5 +1,6 @@
 """A simple example module."""
 
+
 def square(a):
     """Calculate the surface of a square.
 
