@@ -2,4 +2,4 @@
 
 Python Biella example project showing off testing in Python supported by CI automation.
 
-https://pythonbiellagroup.gitlab.io/testinginpython
+Cloned from code snippet [$3622977](https://gitlab.com/pythonbiellagroup/testinginpython/-/snippets/3622977) (GitLab).
