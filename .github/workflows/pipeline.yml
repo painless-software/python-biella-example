@@ -1,7 +1,10 @@
 name: Pipeline
-jobs:
 
+on: push
+
+jobs:
   check:
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         env:
@@ -15,6 +18,7 @@ jobs:
     - run: tox run -e ${{ matrix.env }}
 
   test:
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         python-version:
