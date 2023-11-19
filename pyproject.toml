@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=63"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "example"
+version = "0.1.0"
+description = "Python Biella example"
+readme = "README.md"
+license = {file = "LICENSE"}
+authors = [
+  {name = "Python Biella", email = "biella@python.it"},
+]
+requires-python = ">=3.10"
+dependencies = []
+
+[tool.coverage.report]
+show_missing = true
+
+[tool.coverage.run]
+source = ["example"]
+
+[tool.pytest.ini_options]
+addopts = "--color=yes --doctest-modules --verbose"
+
+[tool.ruff]
+extend-exclude = []
+extend-select = ["ALL"]
+extend-ignore = ["ANN", "D", "FBT002", "INP001", "Q000", "TRY200", "UP"]

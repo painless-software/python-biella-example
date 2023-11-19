@@ -1,0 +1,27 @@
+.tox:
+  image: docker.io/library/python:${PYTHON_VERSION}
+  before_script: pip install tox
+  script: tox
+  variables:
+    PYTHON_VERSION: '3.10'
+
+ruff:
+  extends: .tox
+  variables:
+    TOXENV: ruff
+
+format:
+  extends: .tox
+  variables:
+    TOXENV: format
+
+pytest:
+  extends: .tox
+  variables:
+    TOXENV: py
+  parallel:
+    matrix:
+    - PYTHON_VERSION:
+      - '3.10'
+      - '3.11'
+      - '3.12'
