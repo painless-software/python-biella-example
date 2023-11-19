@@ -1,3 +1,5 @@
+image: docker.io/library/python:3.10
+
 definitions:
   steps:
   - parallel: &codestyle
@@ -6,22 +8,16 @@ definitions:
         script:
         - pip install tox
         - tox run -e ruff
-        python: '3.10'
     - step:
         name: Format
         script:
         - pip install tox
         - tox run -e format
-        python: '3.10'
   - step: &unit-tests
       name: Unit Tests
       script:
       - pip install tox
       - tox run -e py
-      python:
-      - '3.10'
-      - '3.11'
-      - '3.12'
 
 pipelines:
   branches:
