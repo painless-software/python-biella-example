@@ -19,6 +19,8 @@ jobs:
     - run: tox run -e ${{ matrix.env }}
 
   test:
+    needs:
+    - check
     runs-on: ubuntu-latest
     strategy:
       matrix:
