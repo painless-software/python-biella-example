@@ -4,6 +4,7 @@
   script: tox
   variables:
     PYTHON_VERSION: '3.10'
+  needs: []
 
 stages:
 - codestyle
