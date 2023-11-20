@@ -5,23 +5,31 @@
   variables:
     PYTHON_VERSION: '3.10'
 
+stages:
+- codestyle
+- test
+
 lint:
+  stage: codestyle
   extends: .tox
   variables:
     TOXENV: lint
 
 format:
+  stage: codestyle
   extends: .tox
   variables:
     TOXENV: format
 
 pytest:
+  stage: test
   extends: .tox
   variables:
     TOXENV: py
   parallel:
     matrix:
     - PYTHON_VERSION:
+      - '3.9'
       - '3.10'
       - '3.11'
       - '3.12'
