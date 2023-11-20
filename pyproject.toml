@@ -21,7 +21,7 @@ show_missing = true
 source = ["example"]
 
 [tool.pytest.ini_options]
-addopts = "--color=yes --doctest-modules --verbose"
+addopts = "--color=yes --doctest-modules --junitxml=junit.xml --verbose"
 
 [tool.ruff]
 extend-exclude = []
