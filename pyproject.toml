@@ -25,5 +25,8 @@ addopts = "--color=yes --doctest-modules --verbose"
 
 [tool.ruff]
 extend-exclude = []
+extend-include = []
+
+[tool.ruff.lint]
 extend-select = ["ALL"]
 extend-ignore = ["ANN", "D", "FBT002", "INP001", "Q000", "TRY200", "UP"]
