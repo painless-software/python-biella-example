@@ -5,10 +5,10 @@
   variables:
     PYTHON_VERSION: '3.10'
 
-ruff:
+lint:
   extends: .tox
   variables:
-    TOXENV: ruff
+    TOXENV: lint
 
 format:
   extends: .tox

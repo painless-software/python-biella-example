@@ -4,10 +4,10 @@ definitions:
   steps:
   - parallel: &codestyle
     - step:
-        name: Ruff
+        name: Lint
         script:
         - pip install tox
-        - tox run -e ruff
+        - tox run -e lint
     - step:
         name: Format
         script:
